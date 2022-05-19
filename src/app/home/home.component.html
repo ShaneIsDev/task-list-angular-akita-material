@@ -1,8 +1,9 @@
 <div class="container">
-    <button mat-raised-button color="primary">Add Task</button>
+    <button class="btn-add-task" mat-raised-button color="primary"
+    (click)="addTask()">Add Task</button>
     <mat-card>
         <p>My Tasks</p>
-        <button mat-stroked-button>Mark as Completed</button>
+        <button color="primary" mat-stroked-button>Mark as Completed</button>
     </mat-card>
 
 

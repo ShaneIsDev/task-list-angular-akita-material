@@ -1,1 +1,15 @@
-<p>add-task works!</p>
+<div class="container">
+    <h1>Add Task</h1>
+
+    <mat-card>
+        <form [formGroup]="form" (ngSubmit)="form.valid&&addTask()">
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Name" formControlName="name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Detail" formControlName='detail' />
+            </mat-form-field>
+            <button color="primary" mat-raised-button type="submit">Add Task</button>
+        </form>
+    </mat-card>
+</div>
