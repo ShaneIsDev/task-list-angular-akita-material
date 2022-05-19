@@ -7,8 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar'
 import { HttpClientModule } from '@angular/common/http'
+
+// some Modules for the UI:
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatButtonModule } from '@angular/material/button'
+import { MatCardModule } from'@angular/material/card'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatInputModule } from '@angular/material/input'
 
 @NgModule({
   declarations: [
@@ -20,8 +26,14 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserModule,
     RouterModule.forRoot(ROUTES),
     BrowserAnimationsModule,
-    MatToolbarModule,
     HttpClientModule,
+    // some UI module:
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatInputModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
