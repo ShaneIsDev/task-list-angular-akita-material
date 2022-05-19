@@ -2,15 +2,18 @@ import { Query } from "@datorama/akita";
 import { Observable } from "rxjs";
 import { TaskStore, TaskState } from "./store";
 import { Task } from "../task.model";
+import { Injectable } from "@angular/core";
 
 
-
+@Injectable({
+    providedIn: 'root'
+})
 export class TaskQuery extends Query<TaskState>{
     constructor(private taskStore: TaskStore) {
         super(taskStore);
     }
 
-    getTask(): Observable<Task[]> {
+    getTasks(): Observable<Task[]> {
         return this.select(state => state.tasks);
     }
 

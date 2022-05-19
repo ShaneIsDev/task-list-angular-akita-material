@@ -1,16 +1,11 @@
 <div class="container">
-    <button class="btn-add-task" mat-raised-button color="primary"
-    (click)="addTask()">Add Task</button>
-    <mat-card>
-        <p>My Tasks</p>
-        <button color="primary" mat-stroked-button>Mark as Completed</button>
-    </mat-card>
-
-
-
-
-
-
-
+    <button class="btn-add-task" mat-raised-button color="primary" (click)="addTask()">Add Task</button>
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <ng-container *ngIf="!loading">
+        <mat-card *ngFor="let task of tasks">
+            <p>{{task.name}}</p>
+            <button color="primary" mat-stroked-button>Mark as Completed</button>
+        </mat-card>
+    </ng-container>
 
 </div>

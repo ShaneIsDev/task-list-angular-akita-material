@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://postman-echo.com/task'
+  baseUrl: 'https://httpbin.org/anything'
 };
 
 /*
