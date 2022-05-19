@@ -24,7 +24,5 @@ export class TaskStore extends Store<TaskState>{
 
     constructor(){
         super(getInitialState());
-
-
     }
 }
